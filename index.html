@@ -59,6 +59,12 @@
     .js-tabs { margin-bottom: 1rem; }
     .js-tabs a { font-family: 'Google Sans', sans-serif; }
     .tabs.is-toggle.js-tabs li.is-active a { background-color: #363636; border-color: #363636; color: #fff; z-index: 1; }
+    /* rollout rows: one horizontal row, scroll when more tiles than fit */
+    .tab-panel .columns.is-multiline.is-centered { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; overflow-y: hidden; padding-bottom: 0.5rem; scroll-snap-type: x proximity; }
+    .tab-panel .columns.is-multiline.is-centered > .column { flex: 0 0 33.333%; max-width: 33.333%; scroll-snap-align: start; }
+    .tab-panel .columns.is-multiline.is-centered > .column:first-child { margin-left: auto; }
+    .tab-panel .columns.is-multiline.is-centered > .column:last-child { margin-right: auto; }
+    @media screen and (max-width: 768px) { .tab-panel .columns.is-multiline.is-centered > .column { flex: 0 0 70%; max-width: 70%; } }
     /* rollout videos */
     .video-card { text-align: center; }
     .video-card video { width: 100%; aspect-ratio: 16 / 9; border-radius: 10px; background: #000; display: block; }
