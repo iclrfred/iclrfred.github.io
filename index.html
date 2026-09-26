@@ -200,8 +200,8 @@
             FRED trains this architecture with two additional components.
           </p>
           <p>
-            <span style="color: #d9480f;"><b>Self-distillation from noisy futures.</b></span>
-            The <span style="color: #d9480f;">student</span> $\mathbf{f}_\theta$ generates $\mathbf{h}$ from noise, while a momentum
+            <span style="color: #EA4335;"><b>Self-distillation from noisy futures.</b></span>
+            The <span style="color: #EA4335;">student</span> $\mathbf{f}_\theta$ generates $\mathbf{h}$ from noise, while a momentum
             <span style="color: #4285F4;">teacher</span> $\mathbf{f}_\phi$ processes a lightly corrupted ground-truth future observation
             $\mathbf{o}^\tau_{t+1} = (1-\tau)\,\mathbf{o}_{t+1} + \tau\,\boldsymbol{\epsilon}$ under the same conditioning to produce the target $\mathbf{h}^\tau$:
           </p>
@@ -220,7 +220,7 @@
              \mathcal{L}_{\mathrm{SD}}(\theta) = \frac{1}{N} \sum_{i=1}^{N} \mathrm{KL}\!\left(\mathbf{p}^\tau_i \,\|\, \mathbf{p}_i\right)$
           </p>
           <p>
-            <span style="color: #d9480f;"><b>History as temporal context.</b></span>
+            <span style="color: #EA4335;"><b>History as temporal context.</b></span>
             Both student and teacher are conditioned on a short history $\mathbf{o}_{t-H:t}$ rather than only the current frame,
             which provides motion cues (e.g., where the arm is heading) that disambiguate the future.
           </p>
@@ -434,7 +434,7 @@
             We argue that single-step inference works because the denoising objective <i>implicitly</i> teaches the video model to generate future representations:
             it cannot render a high-fidelity video in one step, but its intermediate features already capture the high-level semantics that matter for control,
             such as global robot motion and target object placement.
-            We therefore interpret the video diffusion model as a <span style="color: #d9480f;"><b>future representation generator</b></span>, $\mathbf{h} = \mathbf{f}_\theta(\boldsymbol{\epsilon} \mid \mathbf{o}_t, \mathbf{c})$,
+            We therefore interpret the video diffusion model as a <span style="color: #EA4335;"><b>future representation generator</b></span>, $\mathbf{h} = \mathbf{f}_\theta(\boldsymbol{\epsilon} \mid \mathbf{o}_t, \mathbf{c})$,
             and ask how to train it so that these representations become <i>explicitly</i> good for action generation.
             The figure above supports this view: what predicts task success is not one-step video quality nor representation quality on observed frames,
             but the quality of the future representations generated from noise, which is exactly the quantity the action decoder consumes.
