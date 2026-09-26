@@ -74,6 +74,7 @@
     .video-card .video-sub + video, .video-card .video-sub + .video-slot { margin-top: 0.25rem; }
     .video-wrap { position: relative; }
     .video-wrap video { display: block; width: 100%; }
+    .video-card .video-wrap.wide video { aspect-ratio: 32 / 9; }
     .speed-badge { position: absolute; top: 8px; left: 8px; background: rgba(0,0,0,0.65); color: #fff; font-size: 0.75rem; font-weight: 700; padding: 2px 7px; border-radius: 6px; pointer-events: none; font-family: 'Google Sans', sans-serif; }
     /* empty video slots */
     .video-slot {
@@ -317,7 +318,7 @@
         </div>
         <p class="has-text-centered" style="margin-top:2rem"><b>Inference speed comparison: FRED 14B vs. DreamZero 14B (Stamp, 1&times;)</b></p>
         <div class="columns is-centered">
-          <div class="column is-8-tablet is-12-mobile"><div class="video-card"><div class="video-wrap"><video controls muted loop playsinline preload="none"><source src="./static/videos/droid/stamp_speed_fred14b_vs_dreamzero.mp4" type="video/mp4"></video><span class="speed-badge">1&times;</span></div><div class="video-sub">Same task, same 14B backbone, both played at real-time speed. Left: FRED (single denoising step). Right: DreamZero (multi-step video generation).</div></div></div>
+          <div class="column is-9-tablet is-12-mobile"><div class="video-card"><div class="video-wrap wide"><video controls muted loop playsinline preload="none"><source src="./static/videos/droid/stamp_speed_fred14b_vs_dreamzero.mp4" type="video/mp4"></video><span class="speed-badge">1&times;</span></div><div class="video-sub">Same task, same 14B backbone, both played at real-time speed. Left: FRED (single denoising step). Right: DreamZero (multi-step video generation).</div></div></div>
         </div>
         <!--/ Zero-shot. -->
         <!-- Co-training. -->
