@@ -436,8 +436,10 @@
             such as global robot motion and target object placement.
             We therefore interpret the video diffusion model as a <span style="color: #EA4335;"><b>future representation generator</b></span>, $\mathbf{h} = \mathbf{f}_\theta(\boldsymbol{\epsilon} \mid \mathbf{o}_t, \mathbf{c})$,
             and ask how to train it so that these representations become <i>explicitly</i> good for action generation.
-            The figure above supports this view: what predicts task success is not one-step video quality nor representation quality on observed frames,
-            but the quality of the future representations generated from noise, which is exactly the quantity the action decoder consumes.
+            In Figures (a) and (b), task success is only weakly correlated with one-step video generation quality ($r=0.24$) and representation quality on observed future videos ($r=0.49$).
+            In contrast, in Figure (c), the quality of future representations generated from noise shows a stronger correlation with task success ($r=0.89$).
+            This supports our view of the video diffusion model as a future representation generator and suggests that improving the representations directly used for
+            action generation may be particularly relevant to control performance.
           </p>
         </div>
       </div>
